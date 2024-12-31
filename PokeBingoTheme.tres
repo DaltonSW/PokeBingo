@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ceikrj1b8hv6u"]
+
+[ext_resource type="StyleBox" uid="uid://b3edvetg1sdv5" path="res://Styles/DefaultHoverPanel.tres" id="1_pg0u5"]
+[ext_resource type="StyleBox" uid="uid://boq1n882dg7xm" path="res://Styles/DefaultNormalPanel.tres" id="2_g3lik"]
+[ext_resource type="StyleBox" uid="uid://db78tmwcwecig" path="res://Styles/DefaultFocusPanel.tres" id="3_k5qnd"]
+[ext_resource type="FontFile" uid="uid://qqud5hxio73c" path="res://Fonts/MartianMono-VariableFont.ttf" id="4_8j160"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wd6u2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lx7xk"]
+bg_color = Color(0.125911, 0.125911, 0.125911, 1)
+border_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("4_8j160")
+default_font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_wd6u2")
+Button/styles/hover = ExtResource("1_pg0u5")
+Button/styles/normal = ExtResource("2_g3lik")
+Button/styles/pressed = ExtResource("3_k5qnd")
+GridContainer/constants/h_separation = 10
+GridContainer/constants/v_separation = 10
+LineEdit/styles/focus = ExtResource("2_g3lik")
+LineEdit/styles/normal = ExtResource("2_g3lik")
+MarginContainer/constants/margin_bottom = 5
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_lx7xk")
+TooltipLabel/font_sizes/font_size = 32
+TooltipPanel/styles/panel = ExtResource("2_g3lik")

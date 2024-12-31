@@ -1,0 +1,190 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpvqfef8rj6l0"]
+
+[ext_resource type="Theme" uid="uid://ceikrj1b8hv6u" path="res://PokeBingoTheme.tres" id="1_dcm2t"]
+[ext_resource type="PackedScene" uid="uid://iufr8nwnuhvt" path="res://BingoButton.tscn" id="1_ybopm"]
+[ext_resource type="Script" path="res://BingoBoard.cs" id="2_cydhk"]
+
+[node name="BingoBoard" type="VBoxContainer"]
+custom_minimum_size = Vector2(600, 600)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_dcm2t")
+script = ExtResource("2_cydhk")
+metadata/_edit_horizontal_guides_ = [1199.0]
+
+[node name="Board" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 5
+
+[node name="Button" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button8" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button9" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button10" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button11" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button12" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button13" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button14" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button15" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button16" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button17" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button18" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button19" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button20" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button21" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button22" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button23" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button24" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button25" parent="Board" instance=ExtResource("1_ybopm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SettingsVBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ButtonHBox" type="HBoxContainer" parent="SettingsVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Generate" type="Button" parent="SettingsVBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Generate"
+
+[node name="Clear" type="Button" parent="SettingsVBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="SeedHBox" type="HBoxContainer" parent="SettingsVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsVBox/SeedHBox"]
+layout_mode = 2
+text = "Seed:"
+
+[node name="LineEdit" type="LineEdit" parent="SettingsVBox/SeedHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Enter a number
+between -2,147,483,648
+and 2,147,483,647"
+placeholder_text = "123456789"
+clear_button_enabled = true
+
+[connection signal="pressed" from="SettingsVBox/ButtonHBox/Generate" to="." method="OnGeneratePressed"]
+[connection signal="pressed" from="SettingsVBox/ButtonHBox/Clear" to="." method="OnClearPressed"]

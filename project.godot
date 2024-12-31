@@ -11,15 +11,17 @@ config_version=5
 [application]
 
 config/name="PokeBingo"
+config/version="1.0"
 run/main_scene="res://PokeBingo.tscn"
 config/features=PackedStringArray("4.3", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1000
-window/size/viewport_height=1200
-window/stretch/mode="viewport"
+window/size/viewport_width=730
+window/size/viewport_height=950
+window/energy_saving/keep_screen_on=false
+window/stretch/aspect="ignore"
 
 [dotnet]
 
