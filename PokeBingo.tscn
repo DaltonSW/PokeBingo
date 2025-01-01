@@ -46,9 +46,6 @@ theme = SubResource("Theme_axxgv")
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="TopBar" type="PanelContainer" parent="VBox"]
-layout_mode = 2
-
 [node name="BINGO" type="HBoxContainer" parent="VBox"]
 layout_mode = 2
 size_flags_vertical = 0
@@ -104,3 +101,24 @@ vertical_alignment = 1
 
 [node name="BingoBoard" parent="VBox" instance=ExtResource("3_gjup7")]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "v1.0"
+
+[node name="Label2" type="Label" parent="VBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Made by Dalton :3"
+horizontal_alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="VBox/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Issues or Suggestions Welcome!"
+uri = "https://github.com/DaltonSW/PokeBingo/issues/new"

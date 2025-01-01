@@ -150,4 +150,10 @@ public partial class BingoBoard : VBoxContainer {
         }
     }
 
+    private void OnGuiInput(InputEvent inputEvent) {
+        if (inputEvent is not InputEventMouseButton || !inputEvent.IsPressed() ) return;
+        
+        _seedEdit.ReleaseFocus();
+    } 
+
 }

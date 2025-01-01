@@ -152,6 +152,35 @@ size_flags_vertical = 3
 [node name="SettingsVBox" type="VBoxContainer" parent="."]
 layout_mode = 2
 
+[node name="SeedHBox" type="HBoxContainer" parent="SettingsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsVBox/SeedHBox"]
+layout_mode = 2
+text = "Seed:"
+
+[node name="LineEdit" type="LineEdit" parent="SettingsVBox/SeedHBox"]
+custom_minimum_size = Vector2(425, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Enter a seed value.
+
+Value can be:
+* a number between -2,147,483,648
+and 2,147,483,647 (inclusive)
+
+* any combination of ASCII
+characters (will be converted to 
+an integer)"
+placeholder_text = "123456789"
+context_menu_enabled = false
+clear_button_enabled = true
+caret_blink = true
+
 [node name="ButtonHBox" type="HBoxContainer" parent="SettingsVBox"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -175,31 +204,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Reset"
 
-[node name="SeedHBox" type="HBoxContainer" parent="SettingsVBox"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="Label" type="Label" parent="SettingsVBox/SeedHBox"]
-layout_mode = 2
-text = "Seed:"
-
-[node name="LineEdit" type="LineEdit" parent="SettingsVBox/SeedHBox"]
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "Enter a seed value.
-
-Value can be:
-* a number between -2,147,483,648
-and 2,147,483,647 (inclusive)
-
-* any combination of ASCII
-characters (will be converted to 
-an integer)"
-placeholder_text = "123456789"
-clear_button_enabled = true
-
+[connection signal="gui_input" from="." to="." method="OnGuiInput"]
 [connection signal="pressed" from="SettingsVBox/ButtonHBox/Generate" to="." method="OnGeneratePressed"]
 [connection signal="pressed" from="SettingsVBox/ButtonHBox/Clear" to="." method="OnClearPressed"]
 [connection signal="pressed" from="SettingsVBox/ButtonHBox/Reset" to="." method="OnResetPressed"]
