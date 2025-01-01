@@ -2,6 +2,13 @@ using Godot;
 using System;
 
 public partial class BingoButton : AspectRatioContainer {
+    public bool IsPressed {
+        get => _button.IsPressed();
+        set => _button.SetPressed(value);
+    }
+    
+    public string Filepath { get; private set; }
+    
     private Button _button;
 
     private TextureRect _sprite;
@@ -19,16 +26,13 @@ public partial class BingoButton : AspectRatioContainer {
 
     public void SetPicture(string filepath) {
         var image = GD.Load<Image>(filepath);
-        GD.Print($"Trying to set picture located at {filepath} on {Name}");
+        // GD.Print($"Trying to set picture located at {filepath} on {Name}");
         var texture = new ImageTexture();
         texture.SetImage(image);
-        GD.Print("Texture successfully loaded");
+        // GD.Print("Texture successfully loaded");
         _sprite.Texture = texture;
-        GD.Print("Sprite texture successfully set");
-    }
-
-    public void Unpress() {
-        _button.ButtonPressed = false;
+        // GD.Print("Sprite texture successfully set");
+        Filepath = filepath;
     }
 
     private void OnButtonToggled(bool toggled) {

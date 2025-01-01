@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://iufr8nwnuhvt" path="res://BingoButton.tscn" id="1_ybopm"]
 [ext_resource type="Script" path="res://BingoBoard.cs" id="2_cydhk"]
 
-[node name="BingoBoard" type="VBoxContainer"]
+[node name="BingoBoard" type="VBoxContainer" node_paths=PackedStringArray("_board")]
 custom_minimum_size = Vector2(600, 600)
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +15,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_dcm2t")
 script = ExtResource("2_cydhk")
+_board = NodePath("Board")
 metadata/_edit_horizontal_guides_ = [1199.0]
 
 [node name="Board" type="GridContainer" parent="."]
@@ -160,12 +161,19 @@ alignment = 1
 [node name="Generate" type="Button" parent="SettingsVBox/ButtonHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Clear seed box to generate
+a new, random seed"
 text = "Generate"
 
 [node name="Clear" type="Button" parent="SettingsVBox/ButtonHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Clear"
+
+[node name="Reset" type="Button" parent="SettingsVBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset"
 
 [node name="SeedHBox" type="HBoxContainer" parent="SettingsVBox"]
 layout_mode = 2
@@ -180,11 +188,18 @@ text = "Seed:"
 [node name="LineEdit" type="LineEdit" parent="SettingsVBox/SeedHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-tooltip_text = "Enter a number
-between -2,147,483,648
-and 2,147,483,647"
+tooltip_text = "Enter a seed value.
+
+Value can be:
+* a number between -2,147,483,648
+and 2,147,483,647 (inclusive)
+
+* any combination of ASCII
+characters (will be converted to 
+an integer)"
 placeholder_text = "123456789"
 clear_button_enabled = true
 
 [connection signal="pressed" from="SettingsVBox/ButtonHBox/Generate" to="." method="OnGeneratePressed"]
 [connection signal="pressed" from="SettingsVBox/ButtonHBox/Clear" to="." method="OnClearPressed"]
+[connection signal="pressed" from="SettingsVBox/ButtonHBox/Reset" to="." method="OnResetPressed"]

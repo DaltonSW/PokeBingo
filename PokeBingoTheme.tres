@@ -8,6 +8,9 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wd6u2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lx7xk"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
 border_color = Color(1, 1, 1, 1)
 
@@ -22,10 +25,11 @@ GridContainer/constants/h_separation = 10
 GridContainer/constants/v_separation = 10
 LineEdit/styles/focus = ExtResource("2_g3lik")
 LineEdit/styles/normal = ExtResource("2_g3lik")
-MarginContainer/constants/margin_bottom = 5
+MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_lx7xk")
-TooltipLabel/font_sizes/font_size = 32
-TooltipPanel/styles/panel = ExtResource("2_g3lik")
+TooltipLabel/base_type = &"Label"
+TooltipLabel/font_sizes/font_size = 18
+TooltipPanel/styles/panel = ExtResource("1_pg0u5")
